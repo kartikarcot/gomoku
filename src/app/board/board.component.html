@@ -1,0 +1,8 @@
+
+<div style='width:760px;height:760px; position: relative;margin:auto;padding:20px'>
+  <ng-container *ngFor = "let i of rowArr">
+    <ng-container *ngFor = "let j of rowArr">
+        <div class='intersection' [ngStyle] = "{ 'top.px':i, 'left.px' : j }"></div>
+    </ng-container>
+  </ng-container>
+</div>
