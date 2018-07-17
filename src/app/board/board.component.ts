@@ -41,8 +41,10 @@ export class BoardComponent implements OnInit {
         this.clr[this.rows*i+j]=true;
         this.blk[this.rows*i+j]=false;
         this.wht[this.rows*i+j]=false;
+        this.state[this.rows*i+j]=0;
       } 
-    }  
+    } 
+    this.winner=" "; 
   }
 
   
@@ -118,7 +120,6 @@ export class BoardComponent implements OnInit {
           this.checkRightDia(i,j)
         ){
             this.setBoolArrays();
-            this.winner="";
             return true;
           }
       }
