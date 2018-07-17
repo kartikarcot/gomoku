@@ -9,13 +9,15 @@ import { checkAndUpdateBinding } from '../../../node_modules/@angular/core/src/r
 export class BoardComponent implements OnInit {
 
   rows:number = 20;
+  score1:number=0;
+  score2:number=0;
   winner:string="";
   row1:123;
   col1:123;
   clr:boolean[]=[];
   blk:boolean[]=[];
   wht:boolean[]=[];
-  rowArr:number[]=[];
+  rowArr:number[]=[];   
   state:number[] = [];
   player:boolean = true;
   constructor() { 
@@ -36,6 +38,7 @@ export class BoardComponent implements OnInit {
   }
 
   setBoolArrays(){
+    //delay(1000);
     for(var i =0 ; i<this.rows; i++){
       for(var j =0 ; j<this.rows; j++){
         this.clr[this.rows*i+j]=true;
@@ -43,8 +46,7 @@ export class BoardComponent implements OnInit {
         this.wht[this.rows*i+j]=false;
         this.state[this.rows*i+j]=0;
       } 
-    } 
-    this.winner=" "; 
+    }  
   }
 
   
@@ -63,9 +65,9 @@ export class BoardComponent implements OnInit {
     }
     if(this.checkIfGame()){
       if(this.player)
-        this.winner="Player 1 wins!";
+        this.score1+=1;
       else
-        this.winner="Player 2 wins!";
+        this.score2+=1;
     }
 
     
@@ -119,6 +121,7 @@ export class BoardComponent implements OnInit {
           this.checkLeftDia(i,j)||
           this.checkRightDia(i,j)
         ){
+
             this.setBoolArrays();
             return true;
           }
