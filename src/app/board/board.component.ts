@@ -107,7 +107,7 @@ export class BoardComponent implements OnInit {
 
   checkRightDia(i,j){
     for(var k=0; k<5; k++)
-      if((i+k)>this.rows || (j+k) > this.rows || this.state[this.rows*(i+k)+(j-k)]===0 || this.state[this.rows*i+j]!=this.state[this.rows*(i+k)+(j+k)])
+      if((i+k)>this.rows || (j+k) > this.rows || this.state[this.rows*(i+k)+(j+k)]===0 || this.state[this.rows*i+j]!=this.state[this.rows*(i+k)+(j+k)])
         return false;
     return true;
   }
