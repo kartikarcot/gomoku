@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "gomoku"
+version = "0.1.0"
+description = "Python packages to run gomoku AI"
+authors = ["Kartik Arcot <askarthikkumar@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+jax = "^0.4.14"
+mctx = "^0.0.3"
+numpy = "^1.25.2"
+pandas = "^2.0.3"
+Flask = "^2.3.2"
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.0.0"
+nb-black = "^1.0.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
