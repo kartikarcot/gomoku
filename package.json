@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "",
 	"scripts": {
-        "postinstall": "cd frontend && ng build --aot --prod"
+        "postinstall": "cd frontend && npm install && ng build --aot --prod"
 	},
 	"author": "Kartik Arcot",
 	"license": "ISC"
