@@ -20,6 +20,7 @@ plotly = "^5.18.0"
 jax = "^0.4.23"
 flax = "^0.7.5"
 jaxlib = "0.4.19"
+tqdm = "^4.66.2"
 
 [tool.poetry.group.dev.dependencies]
 jupyter = "^1.0.0"
