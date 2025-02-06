@@ -1882,6 +1882,20 @@ examples = ["dm-haiku (>=0.0.3)", "tensorflow (>=2.4.0)", "tensorflow-datasets (
 test = ["dm-haiku (>=0.0.3)", "dm-tree (>=0.1.7)", "flax (==0.5.3)"]
 
 [[package]]
+name = "orbax"
+version = "0.1.9"
+description = "Orbax"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "orbax-0.1.9.tar.gz", hash = "sha256:42dd487ceef9fbf027f4720f3d041686af75120466a528a8a8141226bc197218"},
+]
+
+[package.dependencies]
+orbax-checkpoint = ">=0.1.8"
+
+[[package]]
 name = "orbax-checkpoint"
 version = "0.4.8"
 description = "Orbax Checkpoint"
@@ -3159,4 +3173,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.11,<3.13"
-content-hash = "447d8746980ad70eb3eaaa7cfe2c4b62302a65d9f90160354182e9cd598277f6"
+content-hash = "66f59b91bfaf5d5d21f5e20c9c8d79424cf527eb2b5f4a0409f9eefe8cc76f44"
